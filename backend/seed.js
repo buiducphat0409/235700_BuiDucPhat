@@ -1,24 +1,6 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
-
-const deviceSchema = new mongoose.Schema({
-  deviceId: { type: String, required: true, unique: true },
-  name: { type: String, required: true },
-  deviceType: { type: String, required: true },
-  room: { type: String, required: true },
-  brand: String,
-  model: String,
-  quantity: { type: Number, required: true },
-  status: {
-    type: String,
-    enum: ["Đang sử dụng", "Hư hỏng", "Đang sửa chữa", "Ngừng sử dụng"],
-    default: "Đang sử dụng",
-  },
-  purchaseDate: Date,
-  description: String,
-});
-
-const Device = mongoose.model("Device", deviceSchema);
+const Device = require("./models/Device");
 
 const devices = [
   {
@@ -67,7 +49,6 @@ async function seedDatabase() {
     await Device.deleteMany({
       deviceId: { $in: devices.map((d) => d.deviceId) },
     });
-
     await Device.insertMany(devices);
 
     console.log("Đã thêm 3 thiết bị mẫu thành công!");
