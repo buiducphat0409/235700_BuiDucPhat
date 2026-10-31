@@ -43,3 +43,12 @@ npm install
 npm run dev
 
 Lưu ý: không commit tệp .env lên GitHub.
+
+## 5. Chạy backend bằng Docker
+
+```bash
+docker build -t buiducphat0409/backend ./backend
+docker run -d -p 5000:5000 -e MONGODB_URI="<chuỗi kết nối MongoDB Atlas>" -e CORS_ORIGIN="*" buiducphat0409/backend
+```
+
+Docker Hub: https://hub.docker.com/r/buiducphat0409/backend
