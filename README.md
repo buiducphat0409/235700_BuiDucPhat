@@ -61,3 +61,8 @@ docker run -d -p 5173:80 buiducphat0409/frontend
 ```
 
 Docker Hub: https://hub.docker.com/r/buiducphat0409/frontend
+
+## 7. URL triển khai
+
+- Frontend: https://web-235700.onrender.com
+- Backend API: https://api-235700.onrender.com
