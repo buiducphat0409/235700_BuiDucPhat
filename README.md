@@ -52,3 +52,12 @@ docker run -d -p 5000:5000 -e MONGODB_URI="<chuỗi kết nối MongoDB Atlas>" 
 ```
 
 Docker Hub: https://hub.docker.com/r/buiducphat0409/backend
+
+## 6. Chạy frontend bằng Docker
+
+```bash
+docker build --build-arg VITE_API_URL=<URL backend API> -t buiducphat0409/frontend ./frontend
+docker run -d -p 5173:80 buiducphat0409/frontend
+```
+
+Docker Hub: https://hub.docker.com/r/buiducphat0409/frontend
