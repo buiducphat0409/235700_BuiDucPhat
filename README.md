@@ -1,5 +1,7 @@
 # Quản lý thiết bị phòng học
 
+**Sinh viên:** Bùi Đức Phát - MSSV 235700
+
 ## 1. Giới thiệu
 
 Xây dựng hệ thống quản lý thiết bị phòng học trên nền tảng điện toán đám mây, hỗ trợ thêm, xem, sửa, xóa và tìm kiếm thiết bị.
@@ -10,3 +12,34 @@ Xây dựng hệ thống quản lý thiết bị phòng học trên nền tảng
 - Backend: Node.js, Express
 - Database: MongoDB Atlas
 - Công cụ: Git, GitHub, Docker, Docker Hub, Render
+
+## 3. Cấu trúc dự án
+
+235700_BuiDucPhat/
+├── README.md
+├── .gitignore
+├── backend/ # REST API (Node.js, Express, MongoDB Atlas)
+└── frontend/ # Giao diện web (React)
+
+## 4. Hướng dẫn cài đặt và chạy chương trình
+
+### Yêu cầu
+
+- Node.js 20 trở lên, Git
+- Tài khoản MongoDB Atlas
+
+### Chạy backend
+
+cd backend
+cp .env.example .env # điền MONGODB_URI trong .env
+npm install
+npm start
+
+### Chạy frontend
+
+cd frontend
+cp .env.example .env # VITE_API_URL=http://localhost:5000
+npm install
+npm run dev
+
+Lưu ý: không commit tệp .env lên GitHub.
